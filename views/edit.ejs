@@ -1,0 +1,19 @@
+<% layout("layouts/boilerplate") %>
+
+<div class="col-8 offset-2">
+  <h1>Edit List</h1>
+  <form action="/lists/<%=list._id %>?_method=PUT" method="POST">
+    <label for="list" class="form-label">List:</label>
+    <textarea
+      name="list[body]"
+      id="list"
+      cols="7"
+      rows="3"
+      class="form-control"
+    >
+
+  <%=list.body%></textarea
+    ><br />
+    <button class="btn btn-success">Update List</button>
+  </form>
+</div>
